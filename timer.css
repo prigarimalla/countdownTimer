@@ -1,0 +1,180 @@
+.clock-align {
+   position: absolute;
+   left: 50%;
+   top: 30%;
+   margin-right: -50%;
+   transform: translate(-50%, -50%);
+}
+
+.title{
+	text-align: center; 
+	font: 55px helvetica;
+	margin-bottom: 25px;	
+}
+
+.message{
+	text-align: center; 
+	font: 25px helvetica;
+}
+
+/* PLAY */
+
+body.play ul li.before {
+z-index: 3;
+}
+
+body.play ul li.active {
+animation: asd .5s .5s linear both;
+-webkit-animation: asd .5s .5s linear both;
+z-index: 2;
+}
+
+@keyframes asd {
+0% {
+z-index: 2;
+}
+5% {
+z-index: 4;
+}
+100% {
+z-index: 4;
+}
+}
+@-webkit-keyframes asd {
+0% {
+z-index: 2;
+}
+5% {
+z-index: 4;
+}
+100% {
+z-index: 4;
+}
+}
+
+body.play ul li.active .down {
+z-index: 2;
+animation: turn .5s .5s linear both;
+-webkit-animation: turn .5s .5s linear both;
+}
+
+@keyframes turn {
+0% {
+transform: rotateX(90deg);
+}
+100% {
+transform: rotateX(0deg);
+}
+}
+@-webkit-keyframes turn {
+0% {
+-webkit-transform: rotateX(90deg);
+}
+100% {
+-webkit-transform: rotateX(0deg);
+}
+}
+body.play ul li.before .up {
+z-index: 2;
+animation: turn2 .5s linear both;
+-webkit-animation: turn2 .5s linear both;
+}
+
+@keyframes turn2 {
+0% {
+transform: rotateX(0deg);
+}
+100% {
+transform: rotateX(-90deg);
+}
+}
+@-webkit-keyframes turn2 {
+0% {
+-webkit-transform: rotateX(0deg);
+}
+100% {
+-webkit-transform: rotateX(-90deg);
+}
+}
+
+/* SHADOW */
+
+body.play ul li.before .up .shadow {
+background: -moz-linear-gradient(top, rgba(0, 0, 0, .1) 0%, rgba(0, 0, 0, 1) 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, .1)), color-stop(100%, rgba(0, 0, 0, 1)));
+background: linear-gradient(top, rgba(0, 0, 0, .1) 0%, rgba(0, 0, 0, 1) 100%);
+background: -o-linear-gradient(top, rgba(0, 0, 0, .1) 0%, rgba(0, 0, 0, 1) 100%);
+background: -ms-linear-gradient(top, rgba(0, 0, 0, .1) 0%, rgba(0, 0, 0, 1) 100%);
+background: linear-gradient(to bottom, rgba(0, 0, 0, .1) 0%, rgba(0, 0, 0, 1) 100%);
+animation: show .5s linear both;
+-webkit-animation: show .5s linear both;
+}
+
+body.play ul li.active .up .shadow {
+background: -moz-linear-gradient(top, rgba(0, 0, 0, .1) 0%, rgba(0, 0, 0, 1) 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, .1)), color-stop(100%, rgba(0, 0, 0, 1)));
+background: linear-gradient(top, rgba(0, 0, 0, .1) 0%, rgba(0, 0, 0, 1) 100%);
+background: -o-linear-gradient(top, rgba(0, 0, 0, .1) 0%, rgba(0, 0, 0, 1) 100%);
+background: -ms-linear-gradient(top, rgba(0, 0, 0, .1) 0%, rgba(0, 0, 0, 1) 100%);
+background: linear-gradient(to bottom, rgba(0, 0, 0, .1) 0%, rgba(0, 0, 0, 1) 100%);
+animation: hide .5s .3s linear both;
+-webkit-animation: hide .5s .3s linear both;
+}
+
+/DOWN/
+
+body.play ul li.before .down .shadow {
+background: -moz-linear-gradient(top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, .1) 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 1)), color-stop(100%, rgba(0, 0, 0, .1)));
+background: linear-gradient(top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, .1) 100%);
+background: -o-linear-gradient(top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, .1) 100%);
+background: -ms-linear-gradient(top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, .1) 100%);
+background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, .1) 100%);
+animation: show .5s linear both;
+-webkit-animation: show .5s linear both;
+}
+
+body.play ul li.active .down .shadow {
+background: -moz-linear-gradient(top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, .1) 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 1)), color-stop(100%, rgba(0, 0, 0, .1)));
+background: linear-gradient(top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, .1) 100%);
+background: -o-linear-gradient(top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, .1) 100%);
+background: -ms-linear-gradient(top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, .1) 100%);
+background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, .1) 100%);
+animation: hide .5s .3s linear both;
+-webkit-animation:hide .5s .3s linear both; 
+}
+
+@keyframes show {
+0% {
+opacity: 0;
+}
+100% {
+opacity: 1;
+}
+}
+@-webkit-keyframes show {
+0% {
+opacity: 0;
+}
+100% {
+opacity: 1;
+}
+}
+
+@keyframes hide {
+0% {
+opacity: 1;
+}
+100% {
+opacity: 0;
+}
+}
+@-webkit-keyframes hide {
+0% {
+opacity: 1;
+}
+100% {
+opacity: 0;
+}
+}
